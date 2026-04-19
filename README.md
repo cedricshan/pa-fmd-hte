@@ -12,12 +12,16 @@ A causal machine learning analysis of 1.9 million U.S. adults from the Behaviora
 
 4. **Causal Forest analysis confirms age as the dominant driver** of treatment effect heterogeneity (feature importance = 0.39, 2.5x the next feature), validating the finding through nonparametric causal machine learning.
 
+## Analytical Pipeline
+
+![Analytical Pipeline](figures/pipeline.png)
+
 ## Repository Structure
 
 ```
 ├── report.qmd              # Paper (Quarto → PDF)
 ├── report.pdf              # Rendered manuscript
-├── references.bib          # Bibliography (15 citations)
+├── references.bib          # Bibliography (25 citations)
 ├── apa.csl                 # APA 7th citation style
 ├── requirements.txt        # Python dependencies
 │

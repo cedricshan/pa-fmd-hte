@@ -18,9 +18,7 @@
 \usepackage{float}
 \usepackage[labelfont=bf,font=small]{caption}
 
-% ── TikZ for flow diagram ──
-\usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, backgrounds}
+\usepackage{xcolor}
 
 % ── Hyperlinks ──
 \usepackage[colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black]{hyperref}
@@ -141,56 +139,8 @@ Figure~\ref{fig:pipeline} provides an overview of the analytical pipeline.
 
 \begin{figure}[t]
 \centering
-\begin{tikzpicture}[
-  node distance=0.6cm and 0.8cm,
-  block/.style={rectangle, draw, rounded corners, fill=blue!8,
-    text width=3.0cm, minimum height=0.75cm, align=center, font=\small},
-  bigblock/.style={rectangle, draw, rounded corners, fill=orange!10,
-    text width=3.4cm, minimum height=0.75cm, align=center, font=\small},
-  arr/.style={-{Stealth[length=2.5mm]}, thick},
-  phase/.style={font=\small\bfseries, text=gray!70!black}
-]
-% Data
-\node[block] (load) {Load 6 BRFSS waves\\(2015--2024)};
-\node[block, right=of load] (harm) {Harmonize variables\\($n$\,=\,2.26M)};
-\node[block, right=of harm] (cc) {Complete-case\\($n$\,=\,1.92M)};
-
-% Confirmatory
-\node[bigblock, below=1.0cm of load] (glm) {Survey-weighted\\logistic regression};
-\node[bigblock, right=of glm] (strat) {Age-stratified\\ORs per year};
-\node[bigblock, right=of strat] (trend) {PA\,$\times$\,Age\,$\times$\,Year\\interaction test};
-
-% Causal ML
-\node[bigblock, below=1.0cm of glm, fill=green!10] (cf) {CausalForestDML\\($n$\,=\,50K subsample)};
-\node[bigblock, right=of cf, fill=green!10] (cate) {CATE estimation\\+ feature importance};
-\node[bigblock, right=of cate, fill=green!10] (cart) {CART subgroup\\discovery};
-
-% Robustness
-\node[block, below=1.0cm of cf, fill=red!8] (eval) {E-values};
-\node[block, right=of eval, fill=red!8] (ps) {Propensity\\overlap};
-\node[block, right=of ps, fill=red!8] (plac) {Placebo test\\+ imputation};
-
-% Arrows
-\draw[arr] (load) -- (harm);
-\draw[arr] (harm) -- (cc);
-\draw[arr] (cc) -- (glm);
-\draw[arr] (cc) -- (strat);
-\draw[arr] (glm) -- (strat);
-\draw[arr] (strat) -- (trend);
-\draw[arr] (cc) -- (cf);
-\draw[arr] (cf) -- (cate);
-\draw[arr] (cate) -- (cart);
-\draw[arr] (cc) -- (eval);
-\draw[arr] (cc) -- (ps);
-\draw[arr] (cc) -- (plac);
-
-% Phase labels
-\node[phase, left=0.2cm of load] {\rotatebox{90}{Data}};
-\node[phase, left=0.2cm of glm] {\rotatebox{90}{Confirmatory}};
-\node[phase, left=0.2cm of cf] {\rotatebox{90}{Causal ML}};
-\node[phase, left=0.2cm of eval] {\rotatebox{90}{Robustness}};
-\end{tikzpicture}
-\caption{Analytical pipeline overview. The confirmatory arm (logistic regression) provides precise age-stratified effect estimates on the full sample; the causal ML arm (Causal Forest) independently discovers heterogeneity drivers on a computationally feasible subsample; the robustness arm validates assumptions.}
+\includegraphics[width=\textwidth]{figures/pipeline_new.png}
+\caption{Analytical pipeline. From the pooled BRFSS data (top), three parallel analysis streams converge on the central finding (bottom): the confirmatory arm provides precise age-stratified estimates; the causal ML arm independently discovers age as the dominant heterogeneity driver; the robustness arm validates assumptions.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -444,11 +394,6 @@ Analysis code is available at the project repository.
 
 \section*{Ethics Statement}
 This study uses publicly available, de-identified data from the BRFSS and does not constitute human subjects research. No IRB approval was required.
-
-\section*{AI Disclosure}
-Generative AI (Claude, Anthropic) assisted with Python code development for data processing, statistical modeling, and visualization.
-The Causal Forest analysis was implemented using Microsoft's EconML library.
-All analytical decisions---including research questions, variable selection, model specification, and interpretation of results---were made by the author.
 
 % ═══════════════════════════════════════════════════════════
 \bibliography{references}

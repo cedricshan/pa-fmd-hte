@@ -256,7 +256,3 @@ Markdown("\n".join(rows))
 
 ::: {#refs}
 :::
-
-# AI Disclosure Statement {.unnumbered}
-
-Generative AI (Claude, Anthropic) was used to assist with Python code for data processing, statistical modeling, and visualization. The Causal Forest analysis was implemented using Microsoft's EconML library. All analytical decisions---research questions, variable selection, model specification, and interpretation---were made by the author.

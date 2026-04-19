@@ -27,6 +27,9 @@ __pycache__/
 report.pdf
 arxiv/main.pdf
 
+# Quarto-generated intermediate LaTeX
+report.tex
+
 # Submission archives
 *.zip
 *.tar.gz
