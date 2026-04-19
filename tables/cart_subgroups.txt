@@ -1,0 +1,21 @@
+CART Subgroup Discovery on Estimated CATEs
+==================================================
+|--- Female <= 0.50
+|   |--- Income <= 3.50
+|   |   |--- value: [-0.06]
+|   |--- Income >  3.50
+|   |   |--- Age_Group <= 3.50
+|   |   |   |--- value: [-0.05]
+|   |   |--- Age_Group >  3.50
+|   |   |   |--- value: [-0.03]
+|--- Female >  0.50
+|   |--- Age_Group <= 3.50
+|   |   |--- Income <= 4.50
+|   |   |   |--- value: [-0.05]
+|   |   |--- Income >  4.50
+|   |   |   |--- value: [-0.07]
+|   |--- Age_Group >  3.50
+|   |   |--- Education <= 3.50
+|   |   |   |--- value: [-0.10]
+|   |   |--- Education >  3.50
+|   |   |   |--- value: [-0.09]

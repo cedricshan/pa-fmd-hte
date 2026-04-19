@@ -1,0 +1,32 @@
+# Raw data (too large for git; see data/README.md for download instructions)
+data/*.XPT
+data/*.xpt
+
+# Processed data (reproducible from raw data via src/ pipeline)
+data/*.parquet
+data/*.HTML
+
+# Build artifacts
+__pycache__/
+*.pyc
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# IDE
+.vscode/
+.idea/
+
+# Rendered outputs (reproducible via quarto render / pdflatex)
+report.pdf
+arxiv/main.pdf
+
+# Submission archives
+*.zip
+*.tar.gz

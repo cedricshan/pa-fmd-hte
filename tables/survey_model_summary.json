@@ -1,0 +1,9 @@
+{
+  "n": 1923453,
+  "n_weighted_millions": 180.6,
+  "pa_or": 0.633,
+  "pa_ci": "0.620\u20130.647",
+  "auc": 0.6781,
+  "aic": 1465239.0,
+  "se_method": "cluster-robust (PSU within strata)"
+}

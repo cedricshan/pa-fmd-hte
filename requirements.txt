@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy>=1.24
+statsmodels>=0.14
+scikit-learn>=1.4,<1.7
+econml>=0.15
+shap>=0.42
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+pyarrow>=12.0

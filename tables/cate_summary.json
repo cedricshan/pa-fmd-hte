@@ -1,0 +1,9 @@
+{
+  "n_subsample": 49998,
+  "n_estimators": 500,
+  "ate": -0.0612,
+  "ate_ci": "[-0.1528, 0.0305]",
+  "cate_mean": -0.0612,
+  "cate_std": 0.0515,
+  "elapsed_seconds": 9.0
+}

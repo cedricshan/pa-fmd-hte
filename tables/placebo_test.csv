@@ -1,0 +1,7 @@
+Age_Group,Outcome,OR,CI_L,CI_U
+18-24,Female (placebo),0.753,0.751,0.755
+25-34,Female (placebo),0.827,0.825,0.829
+35-44,Female (placebo),0.865,0.864,0.867
+45-54,Female (placebo),0.877,0.875,0.879
+55-64,Female (placebo),0.884,0.883,0.886
+65+,Female (placebo),0.831,0.83,0.832
