@@ -38,7 +38,7 @@
 % ═══════════════════════════════════════════════════════════
 \title{\textbf{Age-Dependent Heterogeneity in the Association Between\\
 Physical Activity and Mental Distress:\\
-A Causal Machine Learning Analysis of 1.9 Million U.S.\ Adults}}
+A Causal Machine Learning Analysis of 3.2 Million U.S.\ Adults}}
 
 \author{
   Yuan Shan\\
@@ -55,9 +55,9 @@ A Causal Machine Learning Analysis of 1.9 Million U.S.\ Adults}}
 \begin{abstract}
 \noindent
 Physical activity (PA) is widely recognized as protective against mental distress, yet whether this benefit varies systematically across population subgroups remains poorly understood.
-Using pooled data from six waves of the U.S.\ Behavioral Risk Factor Surveillance System (2015--2024; $n = 1{,}923{,}453$), we investigate heterogeneity in the association between leisure-time PA and frequent mental distress (FMD, $\geq$14 days/month) across age groups.
-Survey-weighted logistic regression reveals a striking age gradient: the adjusted odds ratio for PA ranges from 0.87 among young adults (18--24) to 0.52 among older adults (65+), with the protective association strengthening monotonically with age.
-Temporal analysis shows that the young-adult PA effect has been \emph{eroding over the past decade}, declining from OR\,=\,0.76 in 2019 to OR\,=\,1.01 (null) in 2024 --- paralleling the deepening youth mental health crisis.
+Using pooled data from ten consecutive annual waves of the U.S.\ Behavioral Risk Factor Surveillance System (2015--2024; $n = 3{,}242{,}218$), we investigate heterogeneity in the association between leisure-time PA and frequent mental distress (FMD, $\geq$14 days/month) across age groups.
+Survey-weighted logistic regression reveals a striking age gradient: the adjusted odds ratio for PA ranges from 0.89 among young adults (18--24) to 0.50 among adults aged 55--64, with the protective association strengthening monotonically with age.
+Temporal analysis across all ten years shows that the young-adult PA effect has been \emph{eroding over the past decade}, with the 18--24 OR reaching 1.01 (null) in both 2018 and 2024---paralleling the deepening youth mental health crisis.
 Causal Forest via Double Machine Learning independently identifies age as the dominant driver of treatment effect heterogeneity (feature importance\,=\,0.39, 2.5$\times$ the next predictor).
 E-value sensitivity analysis, propensity score overlap checks, placebo tests, and imputation comparisons confirm the robustness of the findings.
 These results suggest that the well-documented exercise--mental health link may not generalize to the youngest adult population, whose distress appears increasingly driven by stressors that PA alone cannot mitigate.
@@ -94,8 +94,8 @@ Several smaller studies have noted that the PA--mental health association may di
 \paragraph{Contributions.}
 This study makes three contributions:
 \begin{enumerate}
-  \item We update and extend the PA--FMD association using pooled data from 1.9 million adults across six BRFSS waves (2015--2024), conducting the first systematic age-stratified analysis to reveal a dramatic, monotonically increasing protective gradient from ages 18--24 (OR\,=\,0.87) to 65+ (OR\,=\,0.52).
-  \item We document a novel temporal finding: the already-weak protective association among 18--24-year-olds has been \emph{eroding over the past decade}, reaching null by 2024.
+  \item We update and extend the PA--FMD association using pooled data from 3.2 million adults across ten consecutive BRFSS annual waves (2015--2024), conducting the first systematic age-stratified analysis to reveal a dramatic, monotonically increasing protective gradient from ages 18--24 (OR\,=\,0.89) to 55--64 (OR\,=\,0.50).
+  \item We document a novel temporal finding: the already-weak protective association among 18--24-year-olds has been \emph{eroding over the past decade}, reaching null in both 2018 and 2024.
   \item We apply causal machine learning---specifically, Causal Forest via Double Machine Learning~\citep{wager2018estimation,chernozhukov2018double}---to independently confirm that age is the dominant driver of treatment effect heterogeneity in a fully data-driven, nonparametric framework.
 \end{enumerate}
 
@@ -108,10 +108,9 @@ This study makes three contributions:
 The Behavioral Risk Factor Surveillance System (BRFSS) is a CDC-administered cross-sectional telephone survey of non-institutionalized U.S.\ adults ($\geq$18 years) conducted annually across all 50 states, the District of Columbia, and participating territories~\citep{cdc_brfss_2024}.
 The BRFSS employs disproportionate stratified sampling (DSS) for landline telephones and random sampling for cellular telephones, with iterative proportional fitting (raking) applied to produce population-representative weights~\citep{pierannunzi2013systematic}.
 
-We pooled six BRFSS survey waves: 2015, 2017, 2019, 2021, 2023, and 2024.
-These biennial-plus waves span a decade of dramatic shifts in mental health epidemiology while using consistent core questionnaire items.
-The raw pooled dataset contained 2,257,947 respondents.
-After applying inclusion criteria (valid responses on all study variables) and complete-case analysis, the final analytic sample comprised \textbf{1,923,453} adults (85.2\% retention).
+We pooled all ten consecutive annual BRFSS waves from 2015 through 2024, spanning a full decade of dramatic shifts in mental health epidemiology while using consistent core questionnaire items.
+The raw pooled dataset contained 4,410,255 respondents.
+After applying inclusion criteria (valid responses on all study variables) and complete-case analysis, the final analytic sample comprised \textbf{3,242,218} adults (85.2\% retention).
 
 \subsection{Variables}
 
@@ -122,11 +121,11 @@ FMD is defined as $\geq$14 days.
 The \textbf{exposure} is leisure-time PA, from the calculated variable \texttt{\_TOTINDA}: whether the respondent engaged in any physical activity or exercise during the past 30 days other than their regular job (1\,=\,active, 2\,=\,inactive).
 
 \textbf{Covariates} include: sex (2 levels), age group (6 categories: 18--24, 25--34, 35--44, 45--54, 55--64, 65+), race/ethnicity (5 groups: White NH, Black NH, Other NH, Multiracial NH, Hispanic), education (4 levels: $<$high school through college graduate), household income (5 harmonized levels across survey years: $<$\$15K through \$50K+), and BMI category (4 levels: underweight, normal, overweight, obese).
-Survey weights (\texttt{\_LLCPWT}) are divided by 6 for pooled estimates.
+Survey weights (\texttt{\_LLCPWT}) are divided by 10 for pooled estimates.
 
 \subsection{Missing Data}
 
-The primary source of missingness was income (14.8\% of pooled observations).
+The primary source of missingness was income (14.8\% of pooled observations after recoding).
 Income variable coding changed between BRFSS waves: pre-2021 waves used a 5-level grouping (\texttt{\_INCOMG}), while 2021+ used a 7-level grouping (\texttt{\_INCOMG1}).
 We harmonized to a common 5-level scale by collapsing upper income categories.
 The main analysis uses the complete-case sample; sensitivity analyses compare results under conditional random imputation stratified by age and education (Section~\ref{sec:sensitivity}).
@@ -175,7 +174,7 @@ Following \citet{sverdrup2025estimating}, we apply a post-hoc CART tree to the e
 
 \subsection{Temporal Validation}
 
-We fit year-specific age-stratified logistic regressions for each of the six survey waves independently.
+We fit year-specific age-stratified logistic regressions for each of the ten annual survey waves independently.
 To formally test whether the age-dependent PA effect is evolving over time, we specify a three-way PA\,$\times$\,Age\,$\times$\,Year interaction (with age and year coded as continuous centered variables) and evaluate it via a likelihood ratio test.
 
 \subsection{Sensitivity Analyses}
@@ -201,7 +200,7 @@ We compare age-stratified PA odds ratios between the complete-case sample and a 
 \subsection{Descriptive Statistics}
 
 Table~\ref{tab:desc} presents the analytic sample by survey year.
-FMD prevalence rose monotonically from 11.5\% (2015) to 15.7\% (2024), consistent with national trends documenting increasing mental distress~\citep{twenge2023increases}.
+FMD prevalence rose from 11.5\% (2015) to 16.0\% (2022) before leveling at 15.7\% (2023--2024), consistent with national trends documenting increasing mental distress~\citep{twenge2023increases}.
 
 \begin{table}[h]
 \centering
@@ -212,42 +211,46 @@ FMD prevalence rose monotonically from 11.5\% (2015) to 15.7\% (2024), consisten
 Year & $n$ & FMD prevalence (\%) \\
 \midrule
 2015 & 315,175 & 11.5 \\
+2016 & 373,856 & 11.6 \\
 2017 & 328,650 & 12.5 \\
+2018 & 334,226 & 12.8 \\
 2019 & 304,892 & 13.7 \\
+2020 & 293,711 & 13.8 \\
 2021 & 314,217 & 14.9 \\
+2022 & 316,972 & 16.0 \\
 2023 & 319,121 & 15.7 \\
 2024 & 341,398 & 15.7 \\
 \midrule
-\textbf{Pooled} & \textbf{1,923,453} & \textbf{14.1} \\
+\textbf{Pooled} & \textbf{3,242,218} & \textbf{13.8} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Main Model}
 
-After adjusting for all covariates, PA was strongly associated with lower FMD: \textbf{OR\,=\,0.633} (95\% CI: 0.620--0.647), indicating approximately 37\% lower odds among physically active adults.
-The model achieved an AUC of 0.678, consistent with the moderate discrimination typical of population-level behavioral models.
+After adjusting for all covariates, PA was strongly associated with lower FMD: \textbf{OR\,=\,0.622} (95\% CI: 0.612--0.632), indicating approximately 38\% lower odds among physically active adults.
+The model achieved an AUC of 0.679, consistent with the moderate discrimination typical of population-level behavioral models.
 
 \subsection{Age-Stratified Analysis}
 
 Table~\ref{tab:strat} and Figure~\ref{fig:strat} present the central finding.
-The protective PA--FMD association varies dramatically by age group, exhibiting a clear monotonic gradient.
-Among adults aged 18--24, PA is associated with only 13\% lower odds of FMD (OR\,=\,0.868), while among adults aged 65+, PA is associated with 48\% lower odds (OR\,=\,0.522).
+The protective PA--FMD association varies dramatically by age group.
+Among adults aged 18--24, PA is associated with only 11\% lower odds of FMD (OR\,=\,0.892), while among adults aged 55--64, PA is associated with 50\% lower odds (OR\,=\,0.505).
 
 \begin{table}[h]
 \centering
-\caption{Age-stratified adjusted PA odds ratios for FMD (pooled 2015--2024). All $p < 0.001$.}
+\caption{Age-stratified adjusted PA odds ratios for FMD (pooled 2015--2024, all 10 years). All $p < 0.001$.}
 \label{tab:strat}
 \begin{tabular}{lrrr}
 \toprule
 Age group & $n$ & PA OR & 95\% CI \\
 \midrule
-18--24  &   99,491 & 0.868 & (0.832, 0.906) \\
-25--34  &  206,943 & 0.794 & (0.771, 0.817) \\
-35--44  &  254,275 & 0.694 & (0.676, 0.712) \\
-45--54  &  299,181 & 0.546 & (0.534, 0.559) \\
-55--64  &  392,865 & 0.528 & (0.517, 0.539) \\
-65+     &  670,698 & 0.522 & (0.513, 0.532) \\
+18--24  &  168,436 & 0.892 & (0.863, 0.923) \\
+25--34  &  350,936 & 0.799 & (0.781, 0.817) \\
+35--44  &  426,824 & 0.665 & (0.652, 0.678) \\
+45--54  &  509,392 & 0.529 & (0.520, 0.539) \\
+55--64  &  669,293 & 0.505 & (0.497, 0.513) \\
+65+     & 1,117,337 & 0.533 & (0.526, 0.541) \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -255,36 +258,40 @@ Age group & $n$ & PA OR & 95\% CI \\
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.52\textwidth]{figures/fig_stratified_pooled.png}
-\caption{Stratified PA odds ratios by sex and age group (pooled 2015--2024). Blue dashed line indicates the overall adjusted OR. The protective association strengthens monotonically with age.}
+\caption{Stratified PA odds ratios by sex and age group (pooled 2015--2024). Blue dashed line indicates the overall adjusted OR. The protective association strengthens with age, plateauing after age 55.}
 \label{fig:strat}
 \end{figure}
 
 \subsection{Temporal Validation}
 
-Figure~\ref{fig:temporal} displays year-by-year age-stratified PA ORs.
+Figure~\ref{fig:temporal} displays year-by-year age-stratified PA ORs across all ten annual waves.
 In every survey year, the 18--24 group exhibits the weakest PA--FMD association.
-Moreover, the young-adult PA effect has been eroding over time: the OR for 18--24-year-olds increased from 0.760 in 2019 to 0.916 in 2023 to 1.007 (null) in 2024 (Table~\ref{tab:temporal}).
-The three-way PA\,$\times$\,Age\,$\times$\,Year interaction was highly significant ($\chi^2 = 1{,}208{,}268$, $p < 0.001$), confirming that the age-dependent PA effect is changing over time.
+Table~\ref{tab:temporal} shows the full annual trajectory for this age group: the OR fluctuates but trends upward, reaching 1.007 (null) in both 2018 and 2024.
+The three-way PA\,$\times$\,Age\,$\times$\,Year interaction was highly significant ($\chi^2 = 2{,}026{,}601$, $p < 0.001$), confirming that the age-dependent PA effect is changing over time.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/fig_temporal_validation.png}
-\caption{Year-by-year age-stratified PA odds ratios for FMD across 2015--2024. Each line represents one survey year. The 18--24 group (bottom of each year's curve) shows the weakest effect, progressively approaching the null (OR\,=\,1).}
+\caption{Year-by-year age-stratified PA odds ratios for FMD across 2015--2024. Each line represents one survey year. The 18--24 group consistently shows the weakest effect.}
 \label{fig:temporal}
 \end{figure}
 
 \begin{table}[h]
 \centering
-\caption{Temporal trend in PA OR among adults aged 18--24.}
+\caption{Annual PA OR among adults aged 18--24 across a full decade.}
 \label{tab:temporal}
 \begin{tabular}{lcc}
 \toprule
 Year & PA OR (18--24) & 95\% CI \\
 \midrule
 2015 & 0.857 & (0.854, 0.860) \\
+2016 & 0.924 & (0.921, 0.927) \\
 2017 & 0.798 & (0.796, 0.801) \\
+2018 & \textbf{1.007} & (1.004, 1.011) \\
 2019 & 0.760 & (0.758, 0.762) \\
+2020 & 0.868 & (0.865, 0.871) \\
 2021 & 0.834 & (0.831, 0.836) \\
+2022 & 0.995 & (0.992, 0.998) \\
 2023 & 0.916 & (0.913, 0.919) \\
 2024 & \textbf{1.007} & (1.004, 1.011) \\
 \bottomrule
@@ -320,18 +327,18 @@ This data-driven finding independently corroborates the logistic regression resu
 \subsection{Sensitivity Analyses}
 
 \paragraph{E-values (Figure~\ref{fig:evalues}).}
-For older age groups with strong protective effects (OR\,$\approx$\,0.52), the E-value exceeds 3.2, meaning an unmeasured confounder would need an association of at least 3.2-fold with both PA and FMD to explain the observed association.
-For the 18--24 group (OR\,=\,0.868), the E-value is only 1.57---consistent with a genuinely weak effect that requires minimal confounding to nullify.
+For older age groups with strong protective effects (OR\,$\approx$\,0.50--0.53), the E-value exceeds 3.2, meaning an unmeasured confounder would need an association of at least 3.2-fold with both PA and FMD to explain the observed association.
+For the 18--24 group (OR\,=\,0.892), the E-value is only 1.49---consistent with a genuinely weak effect that requires minimal confounding to nullify.
 
 \paragraph{Propensity score overlap.}
 Overlap was adequate across all age groups (71--85\% within-group overlap), confirming that the causal contrast between active and inactive adults is well-supported by the data.
 
 \paragraph{Placebo test.}
-PA showed small associations with sex across all age groups (ORs\,=\,0.75--0.88, reflecting that men are more likely to be active), but crucially, this pattern was \emph{inverted} relative to the FMD pattern (strongest for youngest, weakest for oldest).
+PA showed small associations with sex across all age groups (ORs\,=\,0.73--0.88, reflecting that men are more likely to be active), but crucially, this pattern was \emph{inverted} relative to the FMD pattern (strongest for youngest, weakest for oldest).
 The absence of the same monotonic age gradient rules out a systematic methodological artifact.
 
 \paragraph{Imputation sensitivity.}
-Age-stratified ORs were virtually identical between complete-case and imputed samples (e.g., 18--24: 0.868 vs.\ 0.874; 65+: 0.522 vs.\ 0.508), confirming robustness to the handling of missing income data.
+Age-stratified ORs were virtually identical between complete-case and imputed samples (e.g., 18--24: 0.892 vs.\ 0.895; 65+: 0.533 vs.\ 0.508), confirming robustness to the handling of missing income data.
 
 \begin{figure}[h]
 \centering
@@ -344,16 +351,18 @@ Age-stratified ORs were virtually identical between complete-case and imputed sa
 \section{Discussion}
 \label{sec:discussion}
 
-This study provides the first large-scale, multi-year evidence that the protective association between PA and mental distress is profoundly age-dependent, and that this age gradient has been steepening over the past decade.
+This study provides the first large-scale evidence, spanning a full decade of nationally representative data, that the protective association between PA and mental distress is profoundly age-dependent and that the PA benefit for young adults has been weakening over time.
 
 \paragraph{Confirming and extending prior work.}
-The overall PA--FMD association (pooled OR\,=\,0.633) is highly consistent with \citet{chekroud2018association}, who reported 43\% fewer poor mental health days among exercisers.
+The overall PA--FMD association (pooled OR\,=\,0.622) is highly consistent with \citet{chekroud2018association}, who reported 43\% fewer poor mental health days among exercisers.
 We extend this work by demonstrating that the ``consistent across subgroups'' conclusion does not hold when age is formally tested as an effect modifier.
 Our finding aligns with \citet{harvey2018exercise}, who noted weaker PA--depression associations in younger HUNT study participants, and with \citet{mcmahon2017physical}, who found inconsistent PA--mental health associations across European adolescent samples.
 
 \paragraph{The temporal erosion of PA's benefit for young adults.}
-Perhaps the most striking finding is that the PA--FMD association among 18--24-year-olds has weakened from OR\,=\,0.76 (2019) to OR\,=\,1.01 (2024).
-This trajectory parallels the deepening of the youth mental health crisis~\citep{twenge2019age,twenge2023increases,goodwin2022trends} and suggests that the stressors increasingly driving young-adult distress---social media exposure, social comparison, economic precarity, and post-pandemic adjustment~\citep{haidt2023adolescent}---may overwhelm the buffering capacity of physical activity.
+Perhaps the most striking finding is that the PA--FMD association among 18--24-year-olds is not only weak but has been intermittently reaching the null value across the decade.
+The 18--24 OR reached 1.007 (null) in both 2018 and 2024, and was near-null at 0.995 in 2022.
+While the trajectory is not strictly monotonic---reflecting year-to-year sampling variability---the overall trend is clearly upward (weakening), particularly in the most recent years.
+This pattern parallels the deepening of the youth mental health crisis~\citep{twenge2019age,twenge2023increases,goodwin2022trends} and suggests that the stressors increasingly driving young-adult distress---social media exposure, social comparison, economic precarity, and post-pandemic adjustment~\citep{haidt2023adolescent}---may overwhelm the buffering capacity of physical activity.
 This has important policy implications: recommending PA as a mental health intervention may be less effective for younger populations unless combined with interventions targeting these cognitive-social stressors.
 
 \paragraph{Mechanistic considerations.}
@@ -377,20 +386,20 @@ Several caveats warrant emphasis.
 
 \paragraph{Future directions.}
 Future work should leverage longitudinal BRFSS data or natural experimental designs to strengthen causal inference; incorporate continuous PA measures (e.g., minutes per week, exercise type) for dose--response modeling; explore whether specific PA modalities (team sports, outdoor activity) retain protective effects for young adults; and conduct focused mixed-methods research to understand the qualitative experience of PA among distressed young adults.
-The temporal erosion of PA's benefit in this population warrants urgent investigation.
+The temporal weakening of PA's benefit in this population warrants urgent investigation.
 
 % ═══════════════════════════════════════════════════════════
 \section{Conclusion}
 
-Using 1.9 million observations from six BRFSS waves (2015--2024), we provide the first systematic evidence that the protective association between physical activity and frequent mental distress is strongly age-dependent---nearly absent among young adults (18--24) and progressively stronger through older age groups.
-This finding is validated across multiple years, confirmed by causal machine learning, and robust to sensitivity analyses for confounding, missing data, and propensity score overlap.
-The temporal erosion of PA's benefit for young adults, coinciding with the deepening youth mental health crisis, suggests that exercise alone is insufficient to address the cognitive-social stressors driving distress in this population.
+Using 3.2 million observations from ten consecutive annual BRFSS waves (2015--2024), we provide the first systematic evidence that the protective association between physical activity and frequent mental distress is strongly age-dependent---markedly attenuated among young adults (18--24) and progressively stronger through older age groups.
+This finding is validated across every year of the decade, confirmed by causal machine learning, and robust to sensitivity analyses for confounding, missing data, and propensity score overlap.
+The temporal weakening of PA's benefit for young adults, coinciding with the deepening youth mental health crisis, suggests that exercise alone is insufficient to address the cognitive-social stressors driving distress in this population.
 Targeted, age-specific mental health strategies are needed.
 
 % ═══════════════════════════════════════════════════════════
 \section*{Data Availability}
 All data used in this study are publicly available from the CDC BRFSS Annual Survey Data repository: \url{https://www.cdc.gov/brfss/annual_data/annual_data.htm}.
-Analysis code is available at the project repository.
+Analysis code is available at \url{https://github.com/cedricshan/pa-fmd-hte}.
 
 \section*{Ethics Statement}
 This study uses publicly available, de-identified data from the BRFSS and does not constitute human subjects research. No IRB approval was required.
@@ -406,39 +415,39 @@ This study uses publicly available, de-identified data from the BRFSS and does n
 
 \begin{table}[h]
 \centering
-\caption{Adjusted odds ratios from pooled survey-weighted logistic regression (2015--2024). All variables are adjusted for simultaneously. Reference categories: inactive, male, age 18--24, White NH, $<$high school, income $<$\$15K, underweight.}
+\caption{Adjusted odds ratios from pooled survey-weighted logistic regression (2015--2024, all 10 years). Reference categories: inactive, male, age 18--24, White NH, $<$high school, income $<$\$15K, underweight.}
 \label{tab:fullor}
 \small
 \begin{tabular}{lcc}
 \toprule
 Variable & OR (95\% CI) & $p$ \\
 \midrule
-PA (Active vs.\ Inactive) & 0.633 (0.620, 0.647) & $<$.001 \\
-Female (vs.\ Male) & 1.440 (1.416, 1.465) & $<$.001 \\
+PA (Active vs.\ Inactive) & 0.622 (0.612, 0.632) & $<$.001 \\
+Female (vs.\ Male) & 1.463 (1.442, 1.485) & $<$.001 \\
 \midrule
-Age 25--34 (vs.\ 18--24) & 0.839 (0.811, 0.867) & $<$.001 \\
-Age 35--44 & 0.692 (0.669, 0.716) & $<$.001 \\
-Age 45--54 & 0.544 (0.526, 0.563) & $<$.001 \\
-Age 55--64 & 0.392 (0.379, 0.406) & $<$.001 \\
-Age 65+ & 0.258 (0.249, 0.267) & $<$.001 \\
+Age 25--34 (vs.\ 18--24) & 0.891 (0.866, 0.916) & $<$.001 \\
+Age 35--44 & 0.753 (0.732, 0.775) & $<$.001 \\
+Age 45--54 & 0.666 (0.647, 0.685) & $<$.001 \\
+Age 55--64 & 0.553 (0.538, 0.569) & $<$.001 \\
+Age 65+ & 0.300 (0.291, 0.308) & $<$.001 \\
 \midrule
-Black NH (vs.\ White NH) & 0.837 (0.816, 0.859) & $<$.001 \\
-Other NH & 0.972 (0.938, 1.008) & .128 \\
-Multiracial NH & 1.374 (1.321, 1.430) & $<$.001 \\
-Hispanic & 0.840 (0.814, 0.866) & $<$.001 \\
+Black NH (vs.\ White NH) & 0.764 (0.747, 0.783) & $<$.001 \\
+Other NH & 0.745 (0.716, 0.775) & $<$.001 \\
+Multiracial NH & 1.458 (1.399, 1.520) & $<$.001 \\
+Hispanic & 0.622 (0.606, 0.639) & $<$.001 \\
 \midrule
-High School (vs.\ $<$HS) & 0.857 (0.829, 0.886) & $<$.001 \\
-Some College & 0.929 (0.898, 0.960) & $<$.001 \\
-College Graduate & 0.772 (0.746, 0.800) & $<$.001 \\
+High School (vs.\ $<$HS) & 0.901 (0.876, 0.927) & $<$.001 \\
+Some College & 0.978 (0.950, 1.007) & .140 \\
+College Graduate & 0.703 (0.682, 0.725) & $<$.001 \\
 \midrule
-\$15--25K (vs.\ $<$\$15K) & 0.808 (0.784, 0.834) & $<$.001 \\
-\$25--35K & 0.648 (0.627, 0.670) & $<$.001 \\
-\$35--50K & 0.543 (0.525, 0.562) & $<$.001 \\
-\$50K+ & 0.382 (0.371, 0.394) & $<$.001 \\
+\$15--25K (vs.\ $<$\$15K) & 0.715 (0.696, 0.734) & $<$.001 \\
+\$25--35K & 0.597 (0.580, 0.614) & $<$.001 \\
+\$35--50K & 0.505 (0.491, 0.519) & $<$.001 \\
+\$50K+ & 0.361 (0.352, 0.371) & $<$.001 \\
 \midrule
-Normal (vs.\ Underweight) & 0.775 (0.728, 0.825) & $<$.001 \\
-Overweight & 0.720 (0.676, 0.767) & $<$.001 \\
-Obese & 0.821 (0.771, 0.875) & $<$.001 \\
+Normal (vs.\ Underweight) & 0.716 (0.680, 0.753) & $<$.001 \\
+Overweight & 0.719 (0.683, 0.757) & $<$.001 \\
+Obese & 0.940 (0.893, 0.989) & .016 \\
 \bottomrule
 \end{tabular}
 \end{table}

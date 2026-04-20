@@ -14,7 +14,7 @@ import pandas as pd, numpy as np, json, os, time, warnings
 warnings.filterwarnings("ignore")
 os.makedirs("tables", exist_ok=True)
 
-YEARS = [2015, 2017, 2019, 2021, 2023, 2024]
+YEARS = list(range(2015, 2025))  # All 10 years: 2015-2024
 
 # Variable name mappings across years.
 # Sex variable changed from SEX -> SEXVAR around 2022-2024.
@@ -24,6 +24,7 @@ INC_NEW = "_INCOMG1"       # 7-level, available 2021+
 INC_OLD = "_INCOMG"        # 5-level, available 2015-2020
 COMMON_COLS = ["MENTHLTH", "_TOTINDA", "_AGE_G", "_RACEGR3",
                "_EDUCAG", "_BMI5CAT", "_LLCPWT", "_STSTR", "_PSU"]
+RACE_ALT = "_RACEGR4"  # 2022 renamed _RACEGR3 to _RACEGR4 (same coding)
 
 # _AGE80 provides continuous age top-coded at 80
 AGE_CONT = "_AGE80"
@@ -42,7 +43,7 @@ def load_year(year):
     print(f"  Loading {path} …", end=" ", flush=True)
     t0 = time.time()
 
-    want = set(COMMON_COLS + SEX_CANDIDATES + [INC_NEW, INC_OLD, AGE_CONT])
+    want = set(COMMON_COLS + SEX_CANDIDATES + [INC_NEW, INC_OLD, AGE_CONT, RACE_ALT])
     raw = pd.read_sas(path, format="xport", encoding="utf-8")
     avail = [c for c in want if c in raw.columns]
     df = raw[avail].copy()
@@ -52,6 +53,10 @@ def load_year(year):
     sex_col = _find_col(df, SEX_CANDIDATES)
     if sex_col and sex_col != "SEXVAR":
         df.rename(columns={sex_col: "SEXVAR"}, inplace=True)
+
+    # --- Race harmonisation (2022 uses _RACEGR4 with identical coding) ---
+    if "_RACEGR3" not in df.columns and "_RACEGR4" in df.columns:
+        df.rename(columns={"_RACEGR4": "_RACEGR3"}, inplace=True)
 
     # --- Income harmonisation to 5-level common scale ---
     if INC_NEW in df.columns:
