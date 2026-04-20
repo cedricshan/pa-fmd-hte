@@ -5,91 +5,59 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{Centers for Disease Control and
-  Prevention}(2023)]{cdc_mentalhealth_2023}
+\bibitem[{Centers for Disease Control and Prevention}(2023)]{cdc_mentalhealth_2023}
 {Centers for Disease Control and Prevention}.
 \newblock About mental health.
 \newblock \url{https://www.cdc.gov/mentalhealth/learn/}, 2023.
 
-\bibitem[Twenge et~al.(2019)Twenge, Cooper, Joiner, Duffy, and
-  Binau]{twenge2019age}
+\bibitem[Twenge et~al.(2019)Twenge, Cooper, Joiner, Duffy, and Binau]{twenge2019age}
 Jean~M Twenge, A~Bell Cooper, Thomas~E Joiner, Mary~E Duffy, and Sarah~G Binau.
-\newblock Age, period, and cohort trends in mood disorder indicators and
-  suicide-related outcomes in a nationally representative dataset, 2005--2017.
-\newblock \emph{Journal of Abnormal Psychology}, 128\penalty0 (3):\penalty0
-  185--199, 2019.
+\newblock Age, period, and cohort trends in mood disorder indicators and suicide-related outcomes in a nationally representative dataset, 2005--2017.
+\newblock \emph{Journal of Abnormal Psychology}, 128\penalty0 (3):\penalty0 185--199, 2019.
 
 \bibitem[Twenge and Martin(2023)]{twenge2023increases}
 Jean~M Twenge and Gabrielle~N Martin.
-\newblock Increases in poor mental health, mental distress, and depression
-  symptoms among {U.S.} adults, 1993--2020.
-\newblock \emph{Journal of Mood and Anxiety Disorders}, 1:\penalty0 100005,
-  2023.
+\newblock Increases in poor mental health, mental distress, and depression symptoms among {U.S.} adults, 1993--2020.
+\newblock \emph{Journal of Mood and Anxiety Disorders}, 1:\penalty0 100005, 2023.
 
-\bibitem[Goodwin et~al.(2022)Goodwin, Weinberger, Kim, Wu, and
-  Galea]{goodwin2022trends}
-Renee~D Goodwin, Andrea~H Weinberger, Jung~Hye Kim, Melody Wu, and Sandro
-  Galea.
-\newblock Trends in anxiety among adults in the {United States}, 2008--2018:
-  Rapid increases among young adults.
+\bibitem[Goodwin et~al.(2022)Goodwin, Weinberger, Kim, Wu, and Galea]{goodwin2022trends}
+Renee~D Goodwin, Andrea~H Weinberger, Jung~Hye Kim, Melody Wu, and Sandro Galea.
+\newblock Trends in anxiety among adults in the {United States}, 2008--2018: Rapid increases among young adults.
 \newblock \emph{Journal of Psychiatric Research}, 150:\penalty0 299--307, 2022.
 
 \bibitem[Haidt and Twenge(2023)]{haidt2023adolescent}
 Jonathan Haidt and Jean~M Twenge.
-\newblock Adolescent mental health and smartphone-based social media: declining
-  well-being is a global trend.
+\newblock Adolescent mental health and smartphone-based social media: declining well-being is a global trend.
 \newblock \emph{Unpublished manuscript, New York University}, 2023.
 
 \bibitem[Arnett(2000)]{arnett2000emerging}
 Jeffrey~Jensen Arnett.
-\newblock Emerging adulthood: A theory of development from the late teens
-  through the twenties.
-\newblock \emph{American Psychologist}, 55\penalty0 (5):\penalty0 469--480,
-  2000.
+\newblock Emerging adulthood: A theory of development from the late teens through the twenties.
+\newblock \emph{American Psychologist}, 55\penalty0 (5):\penalty0 469--480, 2000.
 
-\bibitem[Schuch et~al.(2018)Schuch, Vancampfort, Firth, Rosenbaum, Ward, Silva,
-  Hallgren, {Ponce De Leon}, Dunn, Deslandes, et~al.]{schuch2018physical}
-Felipe~B Schuch, Davy Vancampfort, Joseph Firth, Simon Rosenbaum, Philip~B
-  Ward, Edson~S Silva, Mats Hallgren, Antonio {Ponce De Leon}, Andrea~L Dunn,
-  Andrea~C Deslandes, et~al.
-\newblock Physical activity and incident depression: A meta-analysis of
-  prospective cohort studies.
-\newblock \emph{American Journal of Psychiatry}, 175\penalty0 (7):\penalty0
-  631--648, 2018.
+\bibitem[Schuch et~al.(2018)Schuch, Vancampfort, Firth, Rosenbaum, Ward, Silva, Hallgren, {Ponce De Leon}, Dunn, Deslandes, et~al.]{schuch2018physical}
+Felipe~B Schuch, Davy Vancampfort, Joseph Firth, Simon Rosenbaum, Philip~B Ward, Edson~S Silva, Mats Hallgren, Antonio {Ponce De Leon}, Andrea~L Dunn, Andrea~C Deslandes, et~al.
+\newblock Physical activity and incident depression: A meta-analysis of prospective cohort studies.
+\newblock \emph{American Journal of Psychiatry}, 175\penalty0 (7):\penalty0 631--648, 2018.
 
-\bibitem[Pearce et~al.(2022)Pearce, Garcia, Abbas, Strain, Schuch, Golber,
-  Kelly, Mok, Rakovac, Sadarangani, et~al.]{pearce2022association}
-Mats Pearce, Leandro Garcia, Ali Abbas, Tessa Strain, Felipe~B Schuch, Rajna
-  Golber, Paul Kelly, Aaron Mok, Ivo Rakovac, Kabir~P Sadarangani, et~al.
-\newblock Association between physical activity and risk of depression: a
-  systematic review and meta-analysis.
+\bibitem[Pearce et~al.(2022)Pearce, Garcia, Abbas, Strain, Schuch, Golber, Kelly, Mok, Rakovac, Sadarangani, et~al.]{pearce2022association}
+Mats Pearce, Leandro Garcia, Ali Abbas, Tessa Strain, Felipe~B Schuch, Rajna Golber, Paul Kelly, Aaron Mok, Ivo Rakovac, Kabir~P Sadarangani, et~al.
+\newblock Association between physical activity and risk of depression: a systematic review and meta-analysis.
 \newblock \emph{JAMA Psychiatry}, 79\penalty0 (6):\penalty0 550--559, 2022.
 
-\bibitem[Singh et~al.(2023)Singh, Olds, Curtis, Dumuid, Virgara, Watson, Szeto,
-  O'Connor, Ferguson, Eglitis, et~al.]{singh2023effectiveness}
-Ben Singh, Timothy Olds, Rachel Curtis, Dorothea Dumuid, Rosa Virgara, Andrea
-  Watson, Kit Szeto, Edward O'Connor, Ty~Ferguson, Emily Eglitis, et~al.
-\newblock Effectiveness of physical activity interventions for improving
-  depression, anxiety and distress: an overview of systematic reviews.
-\newblock \emph{British Journal of Sports Medicine}, 57\penalty0 (18):\penalty0
-  1203--1209, 2023.
+\bibitem[Singh et~al.(2023)Singh, Olds, Curtis, Dumuid, Virgara, Watson, Szeto, O'Connor, Ferguson, Eglitis, et~al.]{singh2023effectiveness}
+Ben Singh, Timothy Olds, Rachel Curtis, Dorothea Dumuid, Rosa Virgara, Andrea Watson, Kit Szeto, Edward O'Connor, Ty~Ferguson, Emily Eglitis, et~al.
+\newblock Effectiveness of physical activity interventions for improving depression, anxiety and distress: an overview of systematic reviews.
+\newblock \emph{British Journal of Sports Medicine}, 57\penalty0 (18):\penalty0 1203--1209, 2023.
 
-\bibitem[Dishman et~al.(2006)Dishman, Berthoud, Booth, Cotman, Edgerton,
-  Fleshner, Gandevia, Gomez-Pinilla, Greenwood, Hillman,
-  et~al.]{dishman2006neurobiology}
-Rod~K Dishman, Hans-Rudolf Berthoud, Frank~W Booth, Carl~W Cotman, V~Regis
-  Edgerton, Monika~R Fleshner, Simon~C Gandevia, Fernando Gomez-Pinilla,
-  Benjamin~N Greenwood, Charles~H Hillman, et~al.
+\bibitem[Dishman et~al.(2006)Dishman, Berthoud, Booth, Cotman, Edgerton, Fleshner, Gandevia, Gomez-Pinilla, Greenwood, Hillman, et~al.]{dishman2006neurobiology}
+Rod~K Dishman, Hans-Rudolf Berthoud, Frank~W Booth, Carl~W Cotman, V~Regis Edgerton, Monika~R Fleshner, Simon~C Gandevia, Fernando Gomez-Pinilla, Benjamin~N Greenwood, Charles~H Hillman, et~al.
 \newblock Neurobiology of exercise.
 \newblock \emph{Obesity}, 14\penalty0 (3):\penalty0 345--356, 2006.
 
-\bibitem[Lubans et~al.(2016)Lubans, Richards, Hillman, Faulkner, Beauchamp,
-  Nilsson, Kelly, Smith, Raine, and Biddle]{lubans2016physical}
-David~R Lubans, Justin Richards, Charles~H Hillman, Guy Faulkner, Mark
-  Beauchamp, Michael Nilsson, Paul Kelly, Jordan Smith, Lauren Raine, and
-  Stuart Biddle.
-\newblock Physical activity for cognitive and mental health in youth: a
-  systematic review of mechanisms.
+\bibitem[Lubans et~al.(2016)Lubans, Richards, Hillman, Faulkner, Beauchamp, Nilsson, Kelly, Smith, Raine, and Biddle]{lubans2016physical}
+David~R Lubans, Justin Richards, Charles~H Hillman, Guy Faulkner, Mark Beauchamp, Michael Nilsson, Paul Kelly, Jordan Smith, Lauren Raine, and Stuart Biddle.
+\newblock Physical activity for cognitive and mental health in youth: a systematic review of mechanisms.
 \newblock \emph{Pediatrics}, 138\penalty0 (3):\penalty0 e20161642, 2016.
 
 \bibitem[{World Health Organization}(2020)]{who2020guidelines}
@@ -97,105 +65,70 @@ David~R Lubans, Justin Richards, Charles~H Hillman, Guy Faulkner, Mark
 \newblock {WHO} guidelines on physical activity and sedentary behaviour.
 \newblock \url{https://www.who.int/publications/i/item/9789240015128}, 2020.
 
-\bibitem[Chekroud et~al.(2018)Chekroud, Gueorguieva, Zheutlin, Paulus,
-  Krumholz, Krystal, and Chekroud]{chekroud2018association}
-Sammi~R Chekroud, Ralitza Gueorguieva, Amanda~B Zheutlin, Martin Paulus,
-  Harlan~M Krumholz, John~H Krystal, and Adam~M Chekroud.
-\newblock Association between physical exercise and mental health in 1.2
-  million individuals in the {USA} between 2011 and 2015: a cross-sectional
-  study.
-\newblock \emph{The Lancet Psychiatry}, 5\penalty0 (9):\penalty0 739--746,
-  2018.
+\bibitem[Chekroud et~al.(2018)Chekroud, Gueorguieva, Zheutlin, Paulus, Krumholz, Krystal, and Chekroud]{chekroud2018association}
+Sammi~R Chekroud, Ralitza Gueorguieva, Amanda~B Zheutlin, Martin Paulus, Harlan~M Krumholz, John~H Krystal, and Adam~M Chekroud.
+\newblock Association between physical exercise and mental health in 1.2 million individuals in the {USA} between 2011 and 2015: a cross-sectional study.
+\newblock \emph{The Lancet Psychiatry}, 5\penalty0 (9):\penalty0 739--746, 2018.
 
-\bibitem[Harvey et~al.(2018)Harvey, {\O}verland, Hatch, Wessely, Mykletun, and
-  Hotopf]{harvey2018exercise}
-Samuel~B Harvey, Simon {\O}verland, Stephani~L Hatch, Simon Wessely, Arnstein
-  Mykletun, and Matthew Hotopf.
-\newblock Exercise and the prevention of depression: results of the {HUNT}
-  cohort study.
-\newblock \emph{American Journal of Psychiatry}, 175\penalty0 (1):\penalty0
-  28--36, 2018.
+\bibitem[Harvey et~al.(2018)Harvey, {\O}verland, Hatch, Wessely, Mykletun, and Hotopf]{harvey2018exercise}
+Samuel~B Harvey, Simon {\O}verland, Stephani~L Hatch, Simon Wessely, Arnstein Mykletun, and Matthew Hotopf.
+\newblock Exercise and the prevention of depression: results of the {HUNT} cohort study.
+\newblock \emph{American Journal of Psychiatry}, 175\penalty0 (1):\penalty0 28--36, 2018.
 
-\bibitem[McMahon et~al.(2017)McMahon, Corcoran, O'Regan, Keeley, Cannon, Carli,
-  Wasserman, Hadlaczky, Sarchiapone, Apter, et~al.]{mcmahon2017physical}
-Elaine~M McMahon, Paul Corcoran, Grace O'Regan, Helen Keeley, Mary Cannon,
-  Vladimir Carli, Camilla Wasserman, Gergoe Hadlaczky, Marco Sarchiapone, Alan
-  Apter, et~al.
-\newblock Physical activity in {European} adolescents and associations with
-  anxiety, depression and well-being.
-\newblock \emph{European Child \& Adolescent Psychiatry}, 26\penalty0
-  (1):\penalty0 111--122, 2017.
+\bibitem[McMahon et~al.(2017)McMahon, Corcoran, O'Regan, Keeley, Cannon, Carli, Wasserman, Hadlaczky, Sarchiapone, Apter, et~al.]{mcmahon2017physical}
+Elaine~M McMahon, Paul Corcoran, Grace O'Regan, Helen Keeley, Mary Cannon, Vladimir Carli, Camilla Wasserman, Gergoe Hadlaczky, Marco Sarchiapone, Alan Apter, et~al.
+\newblock Physical activity in {European} adolescents and associations with anxiety, depression and well-being.
+\newblock \emph{European Child \& Adolescent Psychiatry}, 26\penalty0 (1):\penalty0 111--122, 2017.
 
-\bibitem[Kandola et~al.(2020)Kandola, Lewis, Osborn, Stubbs, and
-  Hayes]{kandola2019depressive}
+\bibitem[Kandola et~al.(2020)Kandola, Lewis, Osborn, Stubbs, and Hayes]{kandola2019depressive}
 Aaron Kandola, Glyn Lewis, David~PJ Osborn, Brendon Stubbs, and Joseph~F Hayes.
-\newblock Depressive symptoms and objectively measured physical activity and
-  sedentary behaviour throughout adolescence: a prospective cohort study.
-\newblock \emph{The Lancet Psychiatry}, 7\penalty0 (3):\penalty0 262--271,
-  2020.
+\newblock Depressive symptoms and objectively measured physical activity and sedentary behaviour throughout adolescence: a prospective cohort study.
+\newblock \emph{The Lancet Psychiatry}, 7\penalty0 (3):\penalty0 262--271, 2020.
 
 \bibitem[Wager and Athey(2018)]{wager2018estimation}
 Stefan Wager and Susan Athey.
-\newblock Estimation and inference of heterogeneous treatment effects using
-  random forests.
-\newblock \emph{Journal of the American Statistical Association}, 113\penalty0
-  (523):\penalty0 1228--1242, 2018.
+\newblock Estimation and inference of heterogeneous treatment effects using random forests.
+\newblock \emph{Journal of the American Statistical Association}, 113\penalty0 (523):\penalty0 1228--1242, 2018.
 
-\bibitem[Chernozhukov et~al.(2018)Chernozhukov, Chetverikov, Demirer, Duflo,
-  Hansen, Newey, and Robins]{chernozhukov2018double}
-Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian
-  Hansen, Whitney Newey, and James Robins.
-\newblock Double/debiased machine learning for treatment and structural
-  parameters.
-\newblock \emph{The Econometrics Journal}, 21\penalty0 (1):\penalty0 C1--C68,
-  2018.
+\bibitem[Chernozhukov et~al.(2018)Chernozhukov, Chetverikov, Demirer, Duflo, Hansen, Newey, and Robins]{chernozhukov2018double}
+Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian Hansen, Whitney Newey, and James Robins.
+\newblock Double/debiased machine learning for treatment and structural parameters.
+\newblock \emph{The Econometrics Journal}, 21\penalty0 (1):\penalty0 C1--C68, 2018.
 
 \bibitem[{Centers for Disease Control and Prevention}(2025)]{cdc_brfss_2024}
 {Centers for Disease Control and Prevention}.
-\newblock {Behavioral Risk Factor Surveillance System}: 2024 survey data and
-  documentation.
+\newblock {Behavioral Risk Factor Surveillance System}: 2024 survey data and documentation.
 \newblock \url{https://www.cdc.gov/brfss/annual_data/annual_2024.html}, 2025.
 
-\bibitem[Pierannunzi et~al.(2013)Pierannunzi, Hu, and
-  Balluz]{pierannunzi2013systematic}
+\bibitem[Pierannunzi et~al.(2013)Pierannunzi, Hu, and Balluz]{pierannunzi2013systematic}
 Carol Pierannunzi, Shaohua~Sean Hu, and Lina Balluz.
-\newblock A systematic review of publications assessing reliability and
-  validity of the {Behavioral Risk Factor Surveillance System (BRFSS)},
-  2004--2011.
+\newblock A systematic review of publications assessing reliability and validity of the {Behavioral Risk Factor Surveillance System (BRFSS)}, 2004--2011.
 \newblock \emph{BMC Medical Research Methodology}, 13:\penalty0 49, 2013.
 
 \bibitem[Athey et~al.(2019)Athey, Tibshirani, and Wager]{athey2019generalized}
 Susan Athey, Julie Tibshirani, and Stefan Wager.
 \newblock Generalized random forests.
-\newblock \emph{The Annals of Statistics}, 47\penalty0 (2):\penalty0
-  1148--1178, 2019.
+\newblock \emph{The Annals of Statistics}, 47\penalty0 (2):\penalty0 1148--1178, 2019.
 
 \bibitem[Kennedy(2023)]{kennedy2023towards}
 Edward~H Kennedy.
-\newblock Towards optimal doubly robust estimation of heterogeneous causal
-  effects.
-\newblock \emph{Electronic Journal of Statistics}, 17\penalty0 (2):\penalty0
-  3008--3049, 2023.
+\newblock Towards optimal doubly robust estimation of heterogeneous causal effects.
+\newblock \emph{Electronic Journal of Statistics}, 17\penalty0 (2):\penalty0 3008--3049, 2023.
 
 \bibitem[{Microsoft Research}(2019)]{econml2019}
 {Microsoft Research}.
-\newblock {EconML}: A {Python} package for {ML}-based heterogeneous treatment
-  effects estimation.
+\newblock {EconML}: A {Python} package for {ML}-based heterogeneous treatment effects estimation.
 \newblock \url{https://github.com/py-why/EconML}, 2019.
 
 \bibitem[Sverdrup and Wager(2025)]{sverdrup2025estimating}
 Erik Sverdrup and Stefan Wager.
-\newblock Estimating treatment effect heterogeneity in psychiatry: a review and
-  tutorial with causal forests.
-\newblock \emph{International Journal of Methods in Psychiatric Research},
-  34\penalty0 (1):\penalty0 e70015, 2025.
+\newblock Estimating treatment effect heterogeneity in psychiatry: a review and tutorial with causal forests.
+\newblock \emph{International Journal of Methods in Psychiatric Research}, 34\penalty0 (1):\penalty0 e70015, 2025.
 
 \bibitem[VanderWeele and Ding(2017)]{vanderweele2017sensitivity}
 Tyler~J VanderWeele and Peng Ding.
-\newblock Sensitivity analysis in observational research: introducing the
-  {E}-value.
-\newblock \emph{Annals of Internal Medicine}, 167\penalty0 (4):\penalty0
-  268--274, 2017.
+\newblock Sensitivity analysis in observational research: introducing the {E}-value.
+\newblock \emph{Annals of Internal Medicine}, 167\penalty0 (4):\penalty0 268--274, 2017.
 
 \bibitem[Rubin(1987)]{rubin1987multiple}
 Donald~B Rubin.
@@ -204,8 +137,7 @@ Donald~B Rubin.
 
 \bibitem[Rosenbaum and Rubin(1983)]{rosenbaum1983central}
 Paul~R Rosenbaum and Donald~B Rubin.
-\newblock The central role of the propensity score in observational studies for
-  causal effects.
+\newblock The central role of the propensity score in observational studies for causal effects.
 \newblock \emph{Biometrika}, 70\penalty0 (1):\penalty0 41--55, 1983.
 
 \end{thebibliography}

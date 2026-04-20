@@ -13,6 +13,7 @@ __pycache__/
 
 # LaTeX build artifacts
 *.aux
+*.blg
 *.log
 *.out
 *.synctex.gz
