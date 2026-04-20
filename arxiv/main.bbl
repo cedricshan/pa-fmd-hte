@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -201,20 +201,6 @@ Tyler~J VanderWeele and Peng Ding.
 Donald~B Rubin.
 \newblock \emph{Multiple Imputation for Nonresponse in Surveys}.
 \newblock John Wiley \& Sons, 1987.
-
-\bibitem[Xiong et~al.(2026)]{xiong2024digital}
-Jiaqi Xiong et~al.
-\newblock Digital behavior and anxiety in the post-pandemic era: a five-year
-  analysis of screen time, sleep, and behavioral risk profiles.
-\newblock \emph{Frontiers in Public Health}, 14:\penalty0 1766808, 2026.
-
-\bibitem[Santomauro et~al.(2021)Santomauro, Mantilla~Herrera, Shadid, Zheng,
-  Ashbaugh, Pigott, Abbafati, et~al.]{santomauro2021global}
-Damian~F Santomauro, Ana~M Mantilla~Herrera, Jamileh Shadid, Peng Zheng,
-  Charlie Ashbaugh, David~M Pigott, Cristiana Abbafati, et~al.
-\newblock Global prevalence and burden of depressive and anxiety disorders in
-  204 countries and territories in 2020 due to the {COVID-19} pandemic.
-\newblock \emph{The Lancet}, 398\penalty0 (10312):\penalty0 1700--1712, 2021.
 
 \bibitem[Rosenbaum and Rubin(1983)]{rosenbaum1983central}
 Paul~R Rosenbaum and Donald~B Rubin.

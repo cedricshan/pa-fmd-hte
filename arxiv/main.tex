@@ -298,47 +298,6 @@ Year & PA OR (18--24) & 95\% CI \\
 \end{tabular}
 \end{table}
 
-\subsection{COVID-19 Period Analysis}
-
-To assess the pandemic's role, we partitioned the decade into three periods: pre-COVID (2015--2019), acute COVID (2020--2021), and post-COVID (2022--2024).
-Table~\ref{tab:covid} presents age-stratified PA ORs by period.
-
-\begin{table}[h]
-\centering
-\caption{PA odds ratios for FMD by age group and COVID-19 period.}
-\label{tab:covid}
-\small
-\begin{tabular}{llrcc}
-\toprule
-Period & Age group & $n$ & PA OR & 95\% CI \\
-\midrule
-\multirow{3}{*}{Pre-COVID}
-  & 18--24 & 82,927 & 0.846 & (0.806, 0.889) \\
-  & 45--54 & 268,254 & 0.536 & (0.523, 0.550) \\
-  & 65+ & 562,345 & 0.570 & (0.558, 0.582) \\
-\midrule
-\multirow{3}{*}{COVID (2020--21)}
-  & 18--24 & 32,973 & 0.847 & (0.787, 0.912) \\
-  & 45--54 & 95,550 & 0.534 & (0.512, 0.557) \\
-  & 65+ & 203,502 & 0.522 & (0.505, 0.540) \\
-\midrule
-\multirow{3}{*}{Post-COVID}
-  & 18--24 & 52,536 & \textbf{0.967} & (0.911, 1.025) \\
-  & 45--54 & 145,588 & 0.502 & (0.486, 0.519) \\
-  & 65+ & 351,490 & 0.496 & (0.483, 0.508) \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-Two findings emerge.
-First, PA's protective association for 18--24-year-olds was stable from pre-COVID to the acute pandemic period (OR\,=\,0.846 vs.\ 0.847), but \textbf{collapsed in the post-COVID era} (OR\,=\,0.967; 95\% CI includes 1).
-The pandemic itself did not weaken PA's benefit for young adults; rather, the post-pandemic environment did.
-Second, the pattern for older adults is reversed: PA became \emph{more} protective during and after COVID (65+: OR declined from 0.570 pre-COVID to 0.496 post-COVID).
-The three-way PA\,$\times$\,Age\,$\times$\,Period interaction was highly significant ($\chi^2 = 3{,}141$, $p < 0.001$), formally confirming that the pandemic widened the age gap in PA's effectiveness.
-
-Concurrently, young-adult FMD prevalence surged by 43\% from 16.8\% (pre-COVID) to 24.0\% (post-COVID), dwarfing the 14\% increase among adults 65+ (7.7\% to 8.8\%).
-This suggests that the post-pandemic mental health burden among young adults is qualitatively different---driven by entrenched digital habits, sustained social media overuse, and disrupted social development~\citep{xiong2024digital,santomauro2021global}---creating a distress profile that PA's neurobiological mechanisms cannot adequately buffer.
-
 \subsection{Causal Forest Results}
 
 The Causal Forest estimated an overall Average Treatment Effect (ATE) of $-0.061$ (95\% CI: $[-0.153, 0.031]$), indicating that PA reduces FMD probability by 6.1 percentage points on average, consistent in direction with the logistic regression.
@@ -403,14 +362,8 @@ Our finding aligns with \citet{harvey2018exercise}, who noted weaker PA--depress
 Perhaps the most striking finding is that the PA--FMD association among 18--24-year-olds is not only weak but has been intermittently reaching the null value across the decade.
 The 18--24 OR reached 1.007 (null) in both 2018 and 2024, and was near-null at 0.995 in 2022.
 While the trajectory is not strictly monotonic---reflecting year-to-year sampling variability---the overall trend is clearly upward (weakening), particularly in the most recent years.
-
-\paragraph{The COVID-19 paradox.}
-Our COVID-period analysis reveals a counterintuitive finding: the pandemic \emph{itself} did not weaken PA's benefit for young adults (acute-COVID OR\,=\,0.847, virtually identical to pre-COVID OR\,=\,0.846).
-Instead, PA's protective association collapsed specifically in the \textbf{post-COVID era} (2022--2024: OR\,=\,0.967).
-Meanwhile, PA became \emph{more} protective for older adults during and after COVID (65+: OR improved from 0.570 to 0.496).
-This divergent trajectory suggests a qualitative shift in young-adult distress: post-pandemic mental health burdens---driven by entrenched screen time, sustained social media overuse~\citep{xiong2024digital}, and disrupted social development during formative years~\citep{santomauro2021global}---represent a fundamentally different distress profile than the somatic health anxiety of the acute pandemic.
-The 43\% surge in young-adult FMD prevalence (16.8\% to 24.0\%) underscores that the post-pandemic environment has produced a volume and nature of distress that PA alone cannot mitigate.
-This has important policy implications: recommending PA as a mental health intervention may be less effective for younger populations unless combined with interventions targeting digital wellness, social reconnection, and cognitive-behavioral stressors.
+This pattern parallels the deepening of the youth mental health crisis~\citep{twenge2019age,twenge2023increases,goodwin2022trends} and suggests that the stressors increasingly driving young-adult distress---social media exposure, social comparison, economic precarity, and post-pandemic adjustment~\citep{haidt2023adolescent}---may overwhelm the buffering capacity of physical activity.
+This has important policy implications: recommending PA as a mental health intervention may be less effective for younger populations unless combined with interventions targeting these cognitive-social stressors.
 
 \paragraph{Mechanistic considerations.}
 Several mechanisms may explain the age heterogeneity.
@@ -440,9 +393,8 @@ The temporal weakening of PA's benefit in this population warrants urgent invest
 
 Using 3.2 million observations from ten consecutive annual BRFSS waves (2015--2024), we provide the first systematic evidence that the protective association between physical activity and frequent mental distress is strongly age-dependent---markedly attenuated among young adults (18--24) and progressively stronger through older age groups.
 This finding is validated across every year of the decade, confirmed by causal machine learning, and robust to sensitivity analyses for confounding, missing data, and propensity score overlap.
-COVID-19 period analysis reveals that the erosion occurred not during the pandemic itself but in its aftermath, coinciding with entrenched digital habits and a 43\% surge in young-adult FMD prevalence.
-These findings suggest that exercise alone is insufficient to address the cognitive-social stressors increasingly driving distress in the youngest adult population.
-Targeted, age-specific mental health strategies that combine physical activity with digital wellness and social reconnection interventions are needed.
+The temporal weakening of PA's benefit for young adults, coinciding with the deepening youth mental health crisis, suggests that exercise alone is insufficient to address the cognitive-social stressors driving distress in this population.
+Targeted, age-specific mental health strategies are needed.
 
 % ═══════════════════════════════════════════════════════════
 \section*{Data Availability}
