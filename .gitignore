@@ -23,8 +23,7 @@ __pycache__/
 .vscode/
 .idea/
 
-# Rendered outputs (reproducible via quarto render / pdflatex)
-report.pdf
+# Rendered outputs (reproducible via pdflatex)
 arxiv/main.pdf
 
 # Quarto-generated intermediate LaTeX

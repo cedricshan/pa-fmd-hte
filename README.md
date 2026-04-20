@@ -81,27 +81,6 @@ python src/07_figures.py             # ~5 sec
 
 Step 5 (Causal Forest) is computationally intensive. A SLURM job script for HPC clusters is provided in [`dcc/dcc_job.sh`](dcc/dcc_job.sh).
 
-### Compile Paper
-
-The paper source is in `arxiv/`. Compile with any standard TeX distribution:
-
-```bash
-cd arxiv && pdflatex main && bibtex main && pdflatex main && pdflatex main
-```
-
-Or upload `arxiv/` to [Overleaf](https://www.overleaf.com/) for online compilation.
-
-## Methods
-
-| Method | Purpose | Sample |
-|--------|---------|--------|
-| Survey-weighted logistic regression | Confirmatory age-stratified effect estimates | Full (n = 3.24M) |
-| Causal Forest via Double ML (EconML) | Data-driven HTE discovery + feature importance | Subsample (n = 50K) |
-| Temporal validation | Year-by-year replication across 10 annual waves | Full, per-year |
-| E-values | Sensitivity to unmeasured confounding | Full |
-| Propensity score overlap | Positivity assumption check | Subsample (n = 200K) |
-| Placebo test | Falsification via predetermined outcome | Full |
-| Imputation comparison | Sensitivity to missing income data | Full vs. imputed |
 
 ## Data
 
